@@ -139,7 +139,6 @@ Abschließend muss noch die gewünschte Skalierung gesetzt werden. Hierfür muss
 Die fertigen Gebäude müssen nun noch einzeln als STL-Datei exportiert werden.
 
 <img src="/images/StepByStep/Step4-6.png" alt="Step4-6" style="width: 20%; margin-left: 30%;"/>
-<img src="/images/StepByStep/Step5.png" alt="Step5" style="width: 20%;"/>
 
 
 ### 5. WattePads positionieren
