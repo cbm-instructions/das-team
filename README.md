@@ -1,3 +1,3 @@
-Anleitung 
-zur Erstellung eines 
+Anleitung  
+zur Erstellung eines  
 Interaktiven Campus-Plans
