@@ -4,7 +4,7 @@
 
 Pascal Perle, Marcel Klug, Sebastian Grüb, Rico Zieger
 
-![iExpo](/images/iExpo.gif)
+<img src="/images/iExpo.gif" alt="iExpo.gif" style="width: 60%; margin-left: 20%;"/>
 
 
 ## Einleitung
@@ -96,7 +96,7 @@ Die Hauptplatte mit einer Dicke von 5 mm wird auf 10 mm dicke “Füße” geste
 Auf die Oberseite der Hauptplatte wird ein Rahmen von 10 x 10 mm gesetzt.
 Der Pappdeckel mit einer Dicke von 5 mm sitzt im Rahmen auf 5 mm hohen Stützen und den vorhandenen Wattepads und schließt so mit dem Niveau des 10 mm hohen Rahmens ab.
 
-![Step1-Box](/images/StepByStep/Step1-Box.png)
+<img src="/images/StepByStep/Step1-Box.png" alt="Step1-Box" style="width: 60%; margin-left: 20%;"/>
 
 
 ### 2. Taster/Widerstände planen verlöten
@@ -114,59 +114,57 @@ Nachdem die Taster und Widerstände entsprechend diesem Plan verlötet wurden, e
 Damit jedes Gebäude auch erleuchtet, wenn es gedrückt wird, müssen die LEDs zusammen gelötet werden. In diesem Fall werden dafür 22 einzelne LEDs bzw. 11 doppelte LED-Stücke benötigt. Bei der Verkabelung dieser LEDs empfiehlt es sich zur besseren Unterscheidung der Kontakte verschiedene Farben zu verwenden: Rot für den +5V Kontakt, Blau für den Cl Kontakt, Grau für den Din Kontakt und schließlich Schwarz für den GND Kontakt. Die Länge der Kabel wird so abgemessen, dass sie passend zu den Abständen zwischen den Gebäuden sind. 
 Um die Gebäude mit den LEDs verbinden zu können, werden Grundflächen aus Pappe ausgeschnitten. Diese verbinden im späteren Verlauf LEDs mit Gebäuden. Die Grundflächen benötigen hierzu zwei Klappen, damit die LEDs hindurchgeführt werden können.
 
-![Step3-1](/images/StepByStep/Step3-1.jpg)
+<img src="/images/StepByStep/Step3-1.jpg" alt="Step3-1" style="width: 40%; margin-left: 30%;"/>
 
 Nun kann gelötet werden. Zu Beachten ist, dass Gebäude G vier LEDs bzw. zwei doppelte LED-Stücke benötigt. In welcher Reihenfolge die Kontakte verlötet werden spielt zwar keine Rolle, die Praxis zeigt aber, dass es am einfachsten ist, mit dem untersten zu beginnen. Darüber hinaus sollten die Grundflächen schon nach dem Verlöten einzelner LED-Stücke in Position geschoben werden, da diese nachträglich nur noch schwer anzubringen sind. 
 
-![Step3-2](/images/StepByStep/Step3-2.jpg)
+<img src="/images/StepByStep/Step3-2.jpg" alt="Step3-2" style="width: 40%; margin-left: 30%;"/>
 
 ### 4. 3D-Modellierung der Hochschulgebäude
 
 Die 3D-Modelle der Hochschulgebäude werden mit der 3D-Modelling Software Blender angefertigt. Hierbei wurde die Blender-Version 2.78 benutzt. Die Modelle können manuell erstellt werden. Zur Vereinfachung und Zeiteinsparung können diese auch einfach über eine externe Datei wie [OpenScreetMaps](https://www.openstreetmap.org/export#map=17/49.47058/8.48283) importiert werden. Diese Modelle müssen jedoch noch angepasst werden, um für den 3D-Druck verwendet werden zu können. Den Modellen fehlt zum einen die Dicke an den Wände, sowie die richtige Skalierung.
-Die nötige Dicke kann mittels Solidify-Modifier gesetzt werden. Diesen findet man unter Properties > Modifiers > Add Modifier > Solidify (siehe folgende Abbildung). 
+Die nötige Dicke kann mittels Solidify-Modifier gesetzt werden. Diesen findet man unter Properties > Modifiers > Add Modifier > Solidify.
 
+<img src="/images/StepByStep/Step4-1.png" alt="Step4-1" style="width: 20%; margin-left: 40%;"/>
 
 Besonders Gebäude mit Rundungen müssen manuell korrigiert werden. Zusätzlich sollte auch die Decke der Gebäude auf eine einheitliche Dicke angepasst werden. Dazu müssen die Deckenfläche einfach im Edit-Mode verschoben werden. Die Skalierung kann erst später angewendet werden, da die Gebäude einzeln skaliert werden müssen. Im jetzigen Zustand würde die Skalierung nach dem Parent-Objekt gerichtet werden und deshalb nicht exakt auf das gewünschte Resultat führen.
 
+<img src="/images/StepByStep/Step4-2.png" alt="Step4-2" style="width: 40%; margin-left: 30%;"/>
+
 Da die Gebäude als Gesamtes gesehen werden und nicht als einzelne Gebäude, müssen sie vom Parent-Objekt getrennt werden. Dazu sind im Edit-Mode die entsprechenden Flächen/Faces des jeweiligen Gebäudes auszuwählen, was durch die Taste L beschleunigt werden kann. Die Auswahl kann dann via Taste P und der Auswahl von Selected separiert werden.
 
-Abschließend muss noch die gewünschte Skalierung gesetzt werden. Hierfür muss in Blender unter Properties > Scene > Units das Unit-Preset auf Millimeters gesetzt werden. Die Größe der Gebäude kann nach persönlicher Vorliebe gewählt werden. In diesem Modell beträgt sie beispielsweise 5 cm.
+<img src="/images/StepByStep/Step4-4.png" alt="Step4-4" style="width: 40%; margin-left: 30%;"/>
 
+Abschließend muss noch die gewünschte Skalierung gesetzt werden. Hierfür muss in Blender unter Properties > Scene > Units das Unit-Preset auf Millimeters gesetzt werden. Die Größe der Gebäude kann nach persönlicher Vorliebe gewählt werden. In diesem Modell beträgt sie beispielsweise 5 cm.
 Die fertigen Gebäude müssen nun noch einzeln als STL-Datei exportiert werden.
 
+<img src="/images/StepByStep/Step4-6.png" alt="Step4-6" style="width: 20%; margin-left: 30%;"/>
+<img src="/images/StepByStep/Step5.png" alt="Step5" style="width: 20%;"/>
 
-![Step4-1](/images/StepByStep/Step4-1.png) 
-![Step4-2](/images/StepByStep/Step4-2.png) 
-![Step4-3](/images/StepByStep/Step4-3.png) 
-![Step4-4](/images/StepByStep/Step4-4.png) 
-![Step4-5](/images/StepByStep/Step4-5.png) 
-![Step4-6](/images/StepByStep/Step4-6.png) 
-![Step4-7](/images/StepByStep/Step4-7.png)
-![Step4-8](/images/StepByStep/Step4-8.png)
-![Step4-9](/images/StepByStep/Step4-9.png) 
 
 ### 5. WattePads positionieren
 Um die Gebäude drücken zu können, müssen diese auf einem etwas nachgebenden Boden sitzen. Es hat sich gezeigt, dass zwei handelsübliche WattePads übereinander genau die richtige Höhe und Elastizität dafür bieten. Die WattePads sind dafür gg. zurecht zu schneiden und mittels doppelseitigem Klebeband so um die Taster zu positionieren, dass die Grundflächen der Gebäude gut aufliegen können.
 
-![Step5](/images/StepByStep/Step5.png) 
+<img src="/images/StepByStep/WattePads.jpg" alt="WattePads" style="width: 40%; margin-left: 30%;"/>
+
 
 ### 6. Alle Teile zusammen führen
 Da bereits Taster und WattePads auf dem Holzbrett befestigt sind, werden nun die LEDs und Gebäudemodelle angebracht. Hierzu werden zunächst die LEDs mit den Grundflächen und diese Grundflächen anschließend dann mit den Gebäuden selbst verklebt.
 
-![Step6-1](/images/StepByStep/Step6-1.jpg) 
+<img src="/images/StepByStep/Step6-1.jpg" alt="Step6-1" style="width: 40%; margin-left: 30%;"/>
 
 Als nächstes wird jedes Gebäude an seinem Stellplatz auf dem Holzbrettplatziert. An den Seiten des Holzbretts und an 5-6 weiteren freien Stellen werden kleine Holzklötze angebracht. Diese dienen dazu, dass die Pappe, die als Abdeckung genutzt wird, nicht eingedrückt wird und es somit auch kein “Wackeln” gibt. Ist dies erledigt kann nun die Pappe über die Häuser gelegt werden.  Hierzu werden die Häuser langsam von unten durch die ihnen zugehörigen Löchern geführt.
 
-![Step6-2](/images/StepByStep/Step6-2.jpg) 
+<img src="/images/StepByStep/Step6-2.jpg" alt="Step6-2" style="width: 40%; margin-left: 30%;"/>
 
 ### 7. Stativ für Beamer bauen + Beamer ausrichten
 Um Informationen gut auf der Pappoberfläche darstellen zu können, wird diese mit einem Beamer von oben bestrahlt. Um den Beamer dort positionieren zu können, muss zunächst ein entsprechendes Stativ konstruiert werden. Dafür wird aus dem restlichen Holz, das beim Bau der Hauptplatte übrig geblieben ist, eine 60 x 35 Zentimeter große Platte ausgeschnitten. Diese dient dem Stativ als Standfuß. Anschließend wird die Holzleiste (100 cm x 4 cm x 4 cm), wie auf den Bildern gezeigt, mit Hilfe der Winkelverbinder am Ende der Platte befestigt.
 
-![Step7-1](/images/StepByStep/Step7-1.jpg) 
+<img src="/images/StepByStep/Step7-1.jpg" alt="Step7-1" style="width: 40%; margin-left: 30%;"/>
 
 Im nächsten Schritt wird die Holzleiste (20cm x 4 cm x 2 cm) mit dem Scharnier am oberen Ende der zuvor montierten Leiste befestigt. Um den Beamer befestigen zu können, muss noch die 6mm-Gewindeschraube durch die Leiste geschraubt und mit einer Mutter festgezogen werden. Es empfiehlt sich das Loch der Einfachheit halber vor zu bohren. Die Gewindeschraube muss dabei in etwa 80 cm Höhe über der Bodenplatte durch die Leiste geschraubt werden. Zu guter Letzt wird noch eine beliebige andere Schraube als Abstandshalter so in die Stativstange geschraubt, dass die Leiste, auf der der Beamer befestigt ist, etwa 3 bis 4 Grad nach vorne geneigt wird.
 
-![Step7-2](/images/StepByStep/Step7-2.jpg) 
+<img src="/images/StepByStep/Step7-2.jpg" alt="Step7-2" style="width: 40%; margin-left: 30%;"/>
 
 ### 8. Coding / Arduino mit Raspberry zusammenführen
 Ergänzend zur Verdrahtung und dem physikalischen Aufbau der Taster und ihrer Widerstände muss der Arduino die Spannung am analogen PIN messen, auswerten und einem Gebäude zuordnen. Anschließend muss diese Zuordnung über die USB-Schnittstelle an den Raspberry übertragen werden.
