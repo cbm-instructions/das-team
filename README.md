@@ -4,6 +4,8 @@
 
 Pascal Perle, Marcel Klug, Sebastian Grüb, Rico Zieger
 
+![iExpo](/images/iExpo.gif)
+
 
 ## Einleitung
 Immer wieder klagen Studenten darüber, dass sie sich nicht ausreichend über das Leben auf dem Campus sowie den dort angebotenen Veranstaltungen informiert fühlen. Der interaktive Campus-Plan bietet nun eine Lösung für dieses Problem, indem er den Studierenden spielerisch Informationen über die Gebäude sowie den darin stattfindende Veranstaltungen vermittelt und ihnen so indirekt dabei hilft, aktiver am Leben auf dem Hochschulcampus teilzunehmen.
