@@ -167,6 +167,6 @@ Im nächsten Schritt wird die Holzleiste (20cm x 4 cm x 2 cm) mit dem Scharnier 
 Ergänzend zur Verdrahtung und dem physikalischen Aufbau der Taster und ihrer Widerstände muss der Arduino die Spannung am analogen PIN messen, auswerten und einem Gebäude zuordnen. Anschließend muss diese Zuordnung über die USB-Schnittstelle an den Raspberry übertragen werden.
 
 Zuerst muss der Arduino an das Endgerät, mit installierter Arduino IDE oder lauffähigem Arduino Web Editor, über USB angeschlossen werden. Die Datei LEDbtn.ino wird dann in der Arduino IDE geöffnet und der Port, an welchem der Arduino gefunden wird, ausgewählt.
-Nun muss der Sketch (Arduino Programm Code) über XXXX kompiliert und mit XXXXX  auf den Arduino hochgeladen werden.
+Nun muss der Sketch (Arduino Programm Code) kompiliert und auf den Arduino hochgeladen werden.
 Abschließend muss der Arduino vom Computer getrennt und an den Raspberry angeschlossen werden. Ist der Arduino an den eingeschalteten Raspberry angeschlossen, startet das hochgeladene Programm automatisch.
 
