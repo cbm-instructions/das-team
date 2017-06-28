@@ -174,6 +174,7 @@ Nun muss der Sketch (Arduino Programm Code) kompiliert und auf den Arduino hochg
 Abschließend muss der Arduino vom Computer getrennt und an den Raspberry angeschlossen werden. Ist der Arduino an den eingeschalteten Raspberry angeschlossen, startet das hochgeladene Programm automatisch.
 
 
+#### Quellcode Raspberry Pi (python2)
 ``` Python
 # -*- coding: utf-8 -*-
 import serial
@@ -203,6 +204,7 @@ while True:
 
 ```
 
+#### Quellcode Arduino
 ```CPP
 #include "LPD8806.h"
 #include "SPI.h" // Comment out this line if using Trinket or Gemma
