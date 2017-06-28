@@ -9,7 +9,7 @@ Pascal Perle, Marcel Klug, Sebastian Grüb, Rico Zieger
 
 ## Einleitung
 Immer wieder klagen Studenten darüber, dass sie sich nicht ausreichend über das Leben auf dem Campus sowie den dort angebotenen Veranstaltungen informiert fühlen. Der interaktive Campus-Plan bietet nun eine Lösung für dieses Problem, indem er den Studierenden spielerisch Informationen über die Gebäude sowie den darin stattfindende Veranstaltungen vermittelt und ihnen so indirekt dabei hilft, aktiver am Leben auf dem Hochschulcampus teilzunehmen.
-Der Plan besteht aus physischen 3D-Modellen der 10 Gebäude des Haupt-Campus. Diese sind innen hohl, sodass mehrere LEDs zur farblichen Ausleuchtung der Gebäude darin platziert werden konnten. Die Gebäude selbst sind so positioniert, dass sie durch leichtes Drücken einen darunter liegenden Schalter auslösen, der dann die Beleuchtung des jeweiligen Gebäudes aktiviert. Der gesamte Plan ist in einen stabilen Holzrahmen eingelassen, dessen Oberseite eine weiße Pappschicht bildet. Entsprechende Aussparungen in der Pappe sorgen dafür, dass die Gebäude durch sie hindurch ragen und von außen sichtbar sind. Über ein hölzernes Stativ ist ein Beamer knapp 80 cm oberhalb der Pappe befestigt und so ausgerichtet, dass auf die freien Flächen Informationen zu dem gerade gedrückten Gebäude projiziert werden können.
+Der Plan besteht aus physischen 3D-Modellen der 10 Gebäude des Haupt-Campus. Diese sind innen hohl, sodass mehrere LEDs zur farblichen Ausleuchtung der Gebäude darin platziert werden konnten. Die Gebäude selbst sind so positioniert, dass sie durch leichtes Drücken einen darunter liegenden Taster auslösen, der dann die Beleuchtung des jeweiligen Gebäudes aktiviert. Der gesamte Plan ist in einen stabilen Holzrahmen eingelassen, dessen Oberseite eine weiße Pappschicht bildet. Entsprechende Aussparungen in der Pappe sorgen dafür, dass die Gebäude durch sie hindurch ragen und von außen sichtbar sind. Über ein hölzernes Stativ ist ein Beamer knapp 80 cm oberhalb der Pappe befestigt und so ausgerichtet, dass auf die freien Flächen Informationen zu dem gerade gedrückten Gebäude projiziert werden können.
 
 ## Material und Werkzeug
 Folgende Materialien werden für den Bau des Campus-Plans benötigt:
@@ -90,19 +90,19 @@ Um mit dem Raspberry PI Informationen zu den Gebäuden anzeigen zu können, wird
 
 ## Step-by-Step-Guide
 ### 1. Holzrahmen +Pappdeckel bauen
-Ein Holzrahmen von 60 cm x 70 cm wurde gewählt ,sodass die einzelnen Gebäude noch groß genug sind.
-Das Hauptplatte mit einer Dicke von 5mm wurde auf 10mm dicke “Füße” gestellt (siehe Zeichnung X). Um der Basis des Stativs für den Beamer zu gestatten unter der Fläche des Holzrahmen zu sitzen, wurde die Hinterseite offen gelassen.
+Ein Holzrahmen von 60 cm x 70 cm wird gewählt, sodass die einzelnen Gebäude noch groß genug sind.
+Die Hauptplatte mit einer Dicke von 5 mm wird auf 10 mm dicke “Füße” gestellt. Um der Basis des Stativs für den Beamer zu gestatten unter der Fläche des Holzrahmen zu sitzen, wird die Hinterseite offen gelassen.
 
-Auf die Oberseite der Hauptplatte wurde ein Rahmen von 10 x 10 mm gesetzt.
-Der Pappdeckel mit einer Dicke von 5mm sitzt im Rahmen auf 5 mm hohen Stützen und den vorhandenen Wattepads und schließt somit dem Niveau des  10 mm hohen Rahmens ab.
+Auf die Oberseite der Hauptplatte wird ein Rahmen von 10 x 10 mm gesetzt.
+Der Pappdeckel mit einer Dicke von 5 mm sitzt im Rahmen auf 5 mm hohen Stützen und den vorhandenen Wattepads und schließt so mit dem Niveau des 10 mm hohen Rahmens ab.
 
 ![Step1-Box](/images/StepByStep/Step1-Box.png)
 
 
-### 2. Buttons/Widerstände planen verlöten
+### 2. Taster/Widerstände planen verlöten
 
-Da jedes der zehn Gebäude auf einen Druck reagieren können soll, wird entsprechend für jedes Gebäude ein separater Schalter benötigt. Der Arduino verfügt jedoch nicht über ausreichend Pins, um jeden davon einzeln anzusprechen, weshalb je fünf Schalter parallel geschaltet werden müssen. Durch die Verwendung unterschiedlicher Widerstände für jeden Schalter kann mit nur einem Pin der anliegende Spannungswert eindeutig zugeordnet werden. Abbildung 1 verdeutlicht diesen Aufbau bildlich. Bei den verwendeten Widerständen vor den Schaltern handelt es sich um jeweils einen 47 Ohm, 100 Ohm, 150 Ohm, 220 Ohm und 1000 Ohm Widerstand. Als Pulldown Widerstand wird ebenfalls ein 100 Ohm Widerstand verwendet.   
-Nachdem die Schalter und Widerstände entsprechend diesem Plan verlötet wurden, empfiehlt es sich diese, wie auf Abbildung 2 zu erkennen ist, mit doppelseitigem Klebeband und Iso-Tape auf dem Boden zu fixieren.
+Da jedes der zehn Gebäude auf einen Druck reagieren können soll, wird entsprechend für jedes Gebäude ein separater Taster benötigt. Der Arduino verfügt jedoch nicht über ausreichend Pins, um jeden davon einzeln anzusprechen, weshalb je fünf Taster parallel geschaltet werden müssen. Durch die Verwendung unterschiedlicher Widerstände für jeden Taster kann mit nur einem Pin der anliegende Spannungswert eindeutig zugeordnet werden. Abbildung 1 verdeutlicht diesen Aufbau bildlich. Bei den verwendeten Widerständen vor den Tastern handelt es sich um jeweils einen 47 Ohm, 100 Ohm, 150 Ohm, 220 Ohm und 1000 Ohm Widerstand. Als Pulldown Widerstand wird ebenfalls ein 100 Ohm Widerstand verwendet.   
+Nachdem die Taster und Widerstände entsprechend diesem Plan verlötet wurden, empfiehlt es sich diese, wie auf Abbildung 2 zu erkennen ist, mit doppelseitigem Klebeband und Iso-Tape auf dem Boden zu fixieren.
 
 ![Step2-Breadboard](/images/StepByStep/Step2-Breadboard.png)
 
@@ -111,26 +111,26 @@ Nachdem die Schalter und Widerstände entsprechend diesem Plan verlötet wurden,
 
 ### 3. LEDs verlöten und montieren
 
-Damit jedes Gebäude auch erleuchtet, wenn es gedrückt wird, müssen die LEDs zusammen gelötet werden. In diesem Fall werden dafür 22 einzelne LEDs bzw. 11 doppelte LED-Stücke benötigt. Als nächstes brauchen Sie die Kabel, welche die LEDs verbinden sollen. Bei der Verkabelung empfiehlt es sich zur besseren Unterscheidung der Kontakte verschiedene Farben zu verwenden: Rot für den +5V Kontakt, Blau für den Cl und den C1 Kontakt, Grau für den Din und D1 Kontakt und schließlich Schwarz für den GND Kontakt. Die Länge der Kabel müssen sie abmessen, da Sie abhängig von den Abständen zwischen den Gebäuden sind. 
-Sie brauchen ebenfalls Grundflächen, welche die LED und das Gebäude zusammenhalten, so dass sich nichts verschiebt. Diese Grundflächen brauchen hierbei zwei Klappen, damit die LED hindurchgeführt werden kann (siehe folgende Abbildung).
-
-Nun kann gelötet werden. Zu Beachten ist, dass Gebäude G vier LEDs bzw. zwei doppelte LED-Stücke benötigt. In welcher Reihenfolge die Kontakte verlötet werden spielt zwar keine Rolle, die Praxis zeigt aber, dass es am einfachsten ist, mit dem Untersten zu beginnen. Darüber hinaus sollten die Grundflächen schon nach dem verlöten einzelner LED-Stücke montiert werden, da diese nachträglich nur noch schwer anzubringen sind (siehe folgende Abbildung). 
+Damit jedes Gebäude auch erleuchtet, wenn es gedrückt wird, müssen die LEDs zusammen gelötet werden. In diesem Fall werden dafür 22 einzelne LEDs bzw. 11 doppelte LED-Stücke benötigt. Bei der Verkabelung dieser LEDs empfiehlt es sich zur besseren Unterscheidung der Kontakte verschiedene Farben zu verwenden: Rot für den +5V Kontakt, Blau für den Cl Kontakt, Grau für den Din Kontakt und schließlich Schwarz für den GND Kontakt. Die Länge der Kabel wird so abgemessen, dass sie passend zu den Abständen zwischen den Gebäuden sind. 
+Um die Gebäude mit den LEDs verbinden zu können, werden Grundflächen aus Pappe ausgeschnitten. Diese verbinden im späteren Verlauf LEDs mit Gebäuden. Die Grundflächen benötigen hierzu zwei Klappen, damit die LEDs hindurchgeführt werden können.
 
 ![Step3-1](/images/StepByStep/Step3-1.jpg)
+
+Nun kann gelötet werden. Zu Beachten ist, dass Gebäude G vier LEDs bzw. zwei doppelte LED-Stücke benötigt. In welcher Reihenfolge die Kontakte verlötet werden spielt zwar keine Rolle, die Praxis zeigt aber, dass es am einfachsten ist, mit dem untersten zu beginnen. Darüber hinaus sollten die Grundflächen schon nach dem Verlöten einzelner LED-Stücke in Position geschoben werden, da diese nachträglich nur noch schwer anzubringen sind. 
 
 ![Step3-2](/images/StepByStep/Step3-2.jpg)
 
 ### 4. 3D-Modellierung der Hochschulgebäude
 
-Die 3D-Modelle der Hochschulgebäude werden mit der 3D-Modelling Software Blender angefertigt. Hierbei wurde die Blender-Version 2.78 benutzt. Die Modelle können manuell erstellet werden. Zur Vereinfachung und Zeiteinsparungkönne diese auch einfach über eine externe Datei wie [OpenScreetMaps](https://www.openstreetmap.org/export#map=17/49.47058/8.48283) importiert werden. Diese Modelle müssen jedoch noch angepasst werden, um für den 3D-Druck verwendet werden zu können. Den Modellen fehlt zum einen die Dicke an den Wände, sowie die richtige Skalierung.
+Die 3D-Modelle der Hochschulgebäude werden mit der 3D-Modelling Software Blender angefertigt. Hierbei wurde die Blender-Version 2.78 benutzt. Die Modelle können manuell erstellt werden. Zur Vereinfachung und Zeiteinsparung können diese auch einfach über eine externe Datei wie [OpenScreetMaps](https://www.openstreetmap.org/export#map=17/49.47058/8.48283) importiert werden. Diese Modelle müssen jedoch noch angepasst werden, um für den 3D-Druck verwendet werden zu können. Den Modellen fehlt zum einen die Dicke an den Wände, sowie die richtige Skalierung.
 Die nötige Dicke kann mittels Solidify-Modifier gesetzt werden. Diesen findet man unter Properties > Modifiers > Add Modifier > Solidify (siehe folgende Abbildung). 
 
 
-Besonders Gebäude mit Rundungen müssen auch manuell korrigiert werden. Zusätzlich sollte auch die Decke der Gebäude auf eine einheitliche Dicke angepasst werden. Dazu müssen die Deckenfläche einfach im Edit-Mode verschoben werden. Die Skalierung kann erst später angewendet werden, da die Gebäude einzeln skaliert werden müssen. Im jetzigen Zustand würde die Skalierung nach dem Parent-Objekt gerichtet werden und deshalb nicht exakt auf das gewünschte Resultat führen.
+Besonders Gebäude mit Rundungen müssen manuell korrigiert werden. Zusätzlich sollte auch die Decke der Gebäude auf eine einheitliche Dicke angepasst werden. Dazu müssen die Deckenfläche einfach im Edit-Mode verschoben werden. Die Skalierung kann erst später angewendet werden, da die Gebäude einzeln skaliert werden müssen. Im jetzigen Zustand würde die Skalierung nach dem Parent-Objekt gerichtet werden und deshalb nicht exakt auf das gewünschte Resultat führen.
 
 Da die Gebäude als Gesamtes gesehen werden und nicht als einzelne Gebäude, müssen sie vom Parent-Objekt getrennt werden. Dazu sind im Edit-Mode die entsprechenden Flächen/Faces des jeweiligen Gebäudes auszuwählen, was durch die Taste L beschleunigt werden kann. Die Auswahl kann dann via Taste P und der Auswahl von Selected separiert werden.
 
-Abschließend muss noch die gewünschte Skalierung gesetzt werden. Hierfür muss in Blender unter Properties > Scene > Units das Unit-Preset auf Millimeters gesetzt werden. Die Größe der Gebäude kann nach persönlicher Vorliebe gewählt werden. In diesem Modell beträgt sie beispielsweise xx.
+Abschließend muss noch die gewünschte Skalierung gesetzt werden. Hierfür muss in Blender unter Properties > Scene > Units das Unit-Preset auf Millimeters gesetzt werden. Die Größe der Gebäude kann nach persönlicher Vorliebe gewählt werden. In diesem Modell beträgt sie beispielsweise 5 cm.
 
 Die fertigen Gebäude müssen nun noch einzeln als STL-Datei exportiert werden.
 
@@ -146,23 +146,26 @@ Die fertigen Gebäude müssen nun noch einzeln als STL-Datei exportiert werden.
 ![Step4-9](/images/StepByStep/Step4-9.png) 
 
 ### 5. WattePads positionieren
-Um die Gebäude drücken zu können, müssen diese auf einem etwas nachgebenden Boden sitzen. Es hat sich gezeigt, dass zwei handelsübliche WattePads übereinander genau die richtige Höhe und Elastizität dafür bieten. Die WattePads sind dafür gg. zurecht zu schneiden und mittels doppelseitigem Klebeband so um die Schalter zu positionieren, dass die Grundflächen der Gebäude gut aufliegen können.
+Um die Gebäude drücken zu können, müssen diese auf einem etwas nachgebenden Boden sitzen. Es hat sich gezeigt, dass zwei handelsübliche WattePads übereinander genau die richtige Höhe und Elastizität dafür bieten. Die WattePads sind dafür gg. zurecht zu schneiden und mittels doppelseitigem Klebeband so um die Taster zu positionieren, dass die Grundflächen der Gebäude gut aufliegen können.
 
 ![Step5](/images/StepByStep/Step5.png) 
 
 ### 6. Alle Teile zusammen führen
-Da Sie nun bereits Buttons und WattePads auf dem Holzbrett befestigt haben, müssen Sie die LEDs und Gebäudemodelle anbringen. Hierzu kleben Sie die Gebäude an die Grundfläche. welche Sie an jede LED angebracht hatten. Dies können Sie in folgender Abbildung sehen:
+Da bereits Taster und WattePads auf dem Holzbrett befestigt sind, werden nun die LEDs und Gebäudemodelle angebracht. Hierzu werden zunächst die LEDs mit den Grundflächen und diese Grundflächen anschließend dann mit den Gebäuden selbst verklebt.
+
 ![Step6-1](/images/StepByStep/Step6-1.jpg) 
 
-Als nächstes platzieren Sie jedes Gebäude an seinem Stellplatz auf dem Holzbrett. An den Seiten des Holzbretts bringen Sie kleine Holzklötze an. Diese dienen dazu, dass die Pappe, die als Abdeckung genutzt wird, nicht eingedrückt wird und es somit auch kein “Wackeln” gibt. Ist dies erledigt kann nun die Pappe über die Häuser gelegt werden.  Hierzu führen Sie die Häuser langsam durch alle den Häuser zugehörigen Löchern durch. Dies kann in folgender Abbildung betrachtet werden:
+Als nächstes wird jedes Gebäude an seinem Stellplatz auf dem Holzbrettplatziert. An den Seiten des Holzbretts und an 5-6 weiteren freien Stellen werden kleine Holzklötze angebracht. Diese dienen dazu, dass die Pappe, die als Abdeckung genutzt wird, nicht eingedrückt wird und es somit auch kein “Wackeln” gibt. Ist dies erledigt kann nun die Pappe über die Häuser gelegt werden.  Hierzu werden die Häuser langsam von unten durch die ihnen zugehörigen Löchern geführt.
+
 ![Step6-2](/images/StepByStep/Step6-2.jpg) 
 
 ### 7. Stativ für Beamer bauen + Beamer ausrichten
-Um Informationen gut auf der Pappoberfläche darstellen zu können, wird diese mit einem Beamer von oben bestrahlt. Um den Beamer dort positionieren zu können, muss ein entsprechendes Stativ konstruiert werden. Dafür wird aus dem restlichen Holz, das beim Bau der Hauptplatte übrig geblieben ist, zunächst eine 60 x 35 Zentimeter große Platte ausgeschnitten. Diese dient dem Stativ als Standfuß.
-Anschließend wird die Holzleiste (100 cm x 4 cm x 4 cm), wie auf den Bildern gezeigt, mit Hilfe der Winkelverbinder am Ende der Platte befestigt.
+Um Informationen gut auf der Pappoberfläche darstellen zu können, wird diese mit einem Beamer von oben bestrahlt. Um den Beamer dort positionieren zu können, muss zunächst ein entsprechendes Stativ konstruiert werden. Dafür wird aus dem restlichen Holz, das beim Bau der Hauptplatte übrig geblieben ist, eine 60 x 35 Zentimeter große Platte ausgeschnitten. Diese dient dem Stativ als Standfuß. Anschließend wird die Holzleiste (100 cm x 4 cm x 4 cm), wie auf den Bildern gezeigt, mit Hilfe der Winkelverbinder am Ende der Platte befestigt.
+
+![Step7-1](/images/StepByStep/Step7-1.jpg) 
 
 Im nächsten Schritt wird die Holzleiste (20cm x 4 cm x 2 cm) mit dem Scharnier am oberen Ende der zuvor montierten Leiste befestigt. Um den Beamer befestigen zu können, muss noch die 6mm-Gewindeschraube durch die Leiste geschraubt und mit einer Mutter festgezogen werden. Es empfiehlt sich das Loch der Einfachheit halber vor zu bohren. Die Gewindeschraube muss dabei in etwa 80 cm Höhe über der Bodenplatte durch die Leiste geschraubt werden. Zu guter Letzt wird noch eine beliebige andere Schraube als Abstandshalter so in die Stativstange geschraubt, dass die Leiste, auf der der Beamer befestigt ist, etwa 3 bis 4 Grad nach vorne geneigt wird.
-![Step7-1](/images/StepByStep/Step7-1.jpg) 
+
 ![Step7-2](/images/StepByStep/Step7-2.jpg) 
 
 ### 8. Coding / Arduino mit Raspberry zusammenführen
