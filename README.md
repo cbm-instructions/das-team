@@ -130,26 +130,38 @@ Da die Gebäude als Gesamtes gesehen werden und nicht als einzelne Gebäude, mü
 
 Abschließend muss noch die gewünschte Skalierung gesetzt werden. Hierfür muss in Blender unter Properties > Scene > Units das Unit-Preset auf Millimeters gesetzt werden. Die Größe der Gebäude kann nach persönlicher Vorliebe gewählt werden. In diesem Modell beträgt sie beispielsweise xx.
 
-Die fertigen Gebäude müssen nun noch einzeln als STL-Datei exportiert werden. 
+Die fertigen Gebäude müssen nun noch einzeln als STL-Datei exportiert werden.
 
-# TODO Bilder
+
+![Step4-1](/images/StepByStep/Step4-1.png) 
+![Step4-2](/images/StepByStep/Step4-2.png) 
+![Step4-3](/images/StepByStep/Step4-3.png) 
+![Step4-4](/images/StepByStep/Step4-4.png) 
+![Step4-5](/images/StepByStep/Step4-5.png) 
+![Step4-6](/images/StepByStep/Step4-6.png) 
+![Step4-7](/images/StepByStep/Step4-7.png)
+![Step4-8](/images/StepByStep/Step4-8.png)
+![Step4-9](/images/StepByStep/Step4-9.png) 
 
 ### 5. WattePads positionieren
 Um die Gebäude drücken zu können, müssen diese auf einem etwas nachgebenden Boden sitzen. Es hat sich gezeigt, dass zwei handelsübliche WattePads übereinander genau die richtige Höhe und Elastizität dafür bieten. Die WattePads sind dafür gg. zurecht zu schneiden und mittels doppelseitigem Klebeband so um die Schalter zu positionieren, dass die Grundflächen der Gebäude gut aufliegen können.
-# TODO Bilder
+
+![Step5](/images/StepByStep/Step5.png) 
 
 ### 6. Alle Teile zusammen führen
 Da Sie nun bereits Buttons und WattePads auf dem Holzbrett befestigt haben, müssen Sie die LEDs und Gebäudemodelle anbringen. Hierzu kleben Sie die Gebäude an die Grundfläche. welche Sie an jede LED angebracht hatten. Dies können Sie in folgender Abbildung sehen:
+![Step6-1](/images/StepByStep/Step6-1.jpg) 
 
 Als nächstes platzieren Sie jedes Gebäude an seinem Stellplatz auf dem Holzbrett. An den Seiten des Holzbretts bringen Sie kleine Holzklötze an. Diese dienen dazu, dass die Pappe, die als Abdeckung genutzt wird, nicht eingedrückt wird und es somit auch kein “Wackeln” gibt. Ist dies erledigt kann nun die Pappe über die Häuser gelegt werden.  Hierzu führen Sie die Häuser langsam durch alle den Häuser zugehörigen Löchern durch. Dies kann in folgender Abbildung betrachtet werden:
+![Step6-2](/images/StepByStep/Step6-2.jpg) 
 
 ### 7. Stativ für Beamer bauen + Beamer ausrichten
-
 Um Informationen gut auf der Pappoberfläche darstellen zu können, wird diese mit einem Beamer von oben bestrahlt. Um den Beamer dort positionieren zu können, muss ein entsprechendes Stativ konstruiert werden. Dafür wird aus dem restlichen Holz, das beim Bau der Hauptplatte übrig geblieben ist, zunächst eine 60 x 35 Zentimeter große Platte ausgeschnitten. Diese dient dem Stativ als Standfuß.
 Anschließend wird die Holzleiste (100 cm x 4 cm x 4 cm), wie auf den Bildern gezeigt, mit Hilfe der Winkelverbinder am Ende der Platte befestigt.
 
 Im nächsten Schritt wird die Holzleiste (20cm x 4 cm x 2 cm) mit dem Scharnier am oberen Ende der zuvor montierten Leiste befestigt. Um den Beamer befestigen zu können, muss noch die 6mm-Gewindeschraube durch die Leiste geschraubt und mit einer Mutter festgezogen werden. Es empfiehlt sich das Loch der Einfachheit halber vor zu bohren. Die Gewindeschraube muss dabei in etwa 80 cm Höhe über der Bodenplatte durch die Leiste geschraubt werden. Zu guter Letzt wird noch eine beliebige andere Schraube als Abstandshalter so in die Stativstange geschraubt, dass die Leiste, auf der der Beamer befestigt ist, etwa 3 bis 4 Grad nach vorne geneigt wird.
-# TODO Bilder
+![Step7-1](/images/StepByStep/Step7-1.jpg) 
+![Step7-2](/images/StepByStep/Step7-2.jpg) 
 
 ### 8. Coding / Arduino mit Raspberry zusammenführen
 Ergänzend zur Verdrahtung und dem physikalischen Aufbau der Taster und ihrer Widerstände muss der Arduino die Spannung am analogen PIN messen, auswerten und einem Gebäude zuordnen. Anschließend muss diese Zuordnung über die USB-Schnittstelle an den Raspberry übertragen werden.
