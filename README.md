@@ -2,9 +2,9 @@
 
 ## Challenge Based Making Sommersemester 2017
 
-Pascal Perle, Marcel Klug, Sebastian Grüb, Rico Zieger
-
 <img src="/images/iExpo.gif" alt="iExpo.gif"/>
+
+Pascal Perle, Marcel Klug, Sebastian Grüb, Rico Zieger
 
 
 ## Einleitung
@@ -13,8 +13,7 @@ Der Plan besteht aus physischen 3D-Modellen der 10 Gebäude des Haupt-Campus. Di
 
 ## Material und Werkzeug
 Folgende Materialien werden für den Bau des Campus-Plans benötigt:
-
-  * Ein beliebiges Endgerät mit einem Betriebssystem, das zur aktuellen Arduino IDE  oder zum Web Editor kompatibel ist, siehe dazu den Eintrag unter Werkzeuge zur Arduino IDE und einen freien USB-Port besitzt.
+  
   * [1x Raspberry Pi Modell 3](https://www.cyberport.de/?DEEP=1123-00G&APID=117&wt_cc2=sea_pla_topseller_v1&gclid=CjwKEAjwm7jKBRDE2_H_t8DVxzISJACwS9WbiKza9JI850KB2_Y9_73PldQr2hXuxBM2C39G0gC9oxoCuPXw_wcB)
   * [1x Arduino Uno](https://store.arduino.cc/arduino-uno-rev3)
   * [1x LED Beamer Telefunken DLP 400](https://www.conrad.de/de/led-beamer-telefunken-dlp400-helligkeit-400-lm-1280-x-800-wxga-1000-1-schwarz-silber-1171421.html?gclid=CjwKEAjwm7jKBRDE2_H_t8DVxzISJACwS9Wb9i6u8JIRXmKfrVj-gZcoSBDnPLN098RzPLXcP3MjIRoC-kfw_wcB&insert_kz=VQ&ef_id=WSiDywAABMn3DC9b:20170624084019:s)
@@ -65,6 +64,8 @@ Folgende Materialien werden für den Bau des Campus-Plans benötigt:
   * [1x Stichsäge](https://www.bauhaus.info/stichsaegen/bosch-easy-stichsaege-pst-700-e-/p/20444590?cid=PSMGoo225980461_18381777181&pla_campid=225980461&pla_adgrid=18381777181&pla_prpaid=302087884039&pla_prid=20444590&pla_adt=pla&pla_prch=online&pla_stco=)
   * [1x Schleifpapier](https://www.zamro.de/product/14D220/schleifgewebe-braun-230x280mm-k120?gclid=Cj0KEQjwhMjKBRDjxb31j-aesI4BEiQA7ivN-Jhw_WbLyqtekcPxskfgJAEs6rEpV_TLv91zDX9SbLwaAr188P8HAQ)
   * Arduino IDE, welche zum Betriebssystem des verwendeten Endgeräts kompatibel ist hier wählen: https://www.arduino.cc/en/main/software
+  * Ein beliebiges Endgerät mit einem Betriebssystem, das zur aktuellen Arduino IDE  oder zum Web Editor kompatibel ist und einen freien USB-Port besitzt, z.B. Surface Pro 3.  
+  https://www.microsoft.com/surface/de-de/devices/surface-pro-3
 
 
 ## Vorbereitung
@@ -167,7 +168,7 @@ Im nächsten Schritt wird die Holzleiste (20cm x 4 cm x 2 cm) mit dem Scharnier 
 <img src="/images/StepByStep/Step7-2.jpg" alt="Step7-2"/>
 
 ### 8. Coding / Arduino mit Raspberry zusammenführen
-Ergänzend zur Verdrahtung und dem physikalischen Aufbau der Taster und ihrer Widerstände muss der Arduino die Spannung am analogen PIN messen, auswerten und einem Gebäude zuordnen. Anschließend muss diese Zuordnung über die USB-Schnittstelle an den Raspberry übertragen werden.
+Ergänzend zur Verdrahtung und dem physikalischen Aufbau der Taster und ihrer Widerstände muss der Arduino die Spannung am analogen PIN messen, auswerten und einem Gebäude zuordnen. Anschließend muss diese Zuordnung über die USB-Schnittstelle an den Raspberry Pi übertragen werden.
 
 Zuerst muss der Arduino an das Endgerät, mit installierter Arduino IDE oder lauffähigem Arduino Web Editor, über USB angeschlossen werden. Die Datei LEDbtn.ino wird dann in der Arduino IDE geöffnet und der Port, an welchem der Arduino gefunden wird, ausgewählt.
 Nun muss der Sketch (Arduino Programm Code) kompiliert und auf den Arduino hochgeladen werden.
